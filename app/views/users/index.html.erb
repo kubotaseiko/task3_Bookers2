@@ -1,0 +1,19 @@
+<%= form_with model: book, url: '/books', local:true do |f| %>
+  <div class="field">
+    <label for="book_title">Title</label>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+     <label for="book_body">Body</label>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions"><%= f.submit 'Create Book' %></div>
+<% end %>
+
+
+<% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= link_to "show", users_path %></td>
+    </tr>
+<% end %>
