@@ -1,13 +1,20 @@
-<%= render 'books/list', books: @book %>
 
-<% @users.each do |user| %>
-Title
-<%= user.nama %>
-Opinion
-<%= user.body %>
+
+<% @books.each do |book| %>
+  <h2>Books</h2>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Oponion</th>
+        <th coispan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <td><% book.user %></td>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+    </tbody>
+  </table>
 <% end %>
-
-
-      <td><%= link_to 'Edit', edit_book_path(book.id) %></td>
-      <td><%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "本当に消しますか？" %></td>
-
