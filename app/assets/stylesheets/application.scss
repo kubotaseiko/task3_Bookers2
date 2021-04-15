@@ -95,6 +95,11 @@ element.style {
     padding-left: 0;
 }
 
+.fa, .fas {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    line-height: normal;
+
 .fa, .fas, .far, .fal, .fad, .fab {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -105,20 +110,17 @@ element.style {
     line-height: 1;
 }
 
+
 .fa, .fas {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 600;
-    line-height: normal;
+font-family: 'Font Awesome 5 Free';
+font-weight: 900;
+}
 }
 
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,0.5);
 }
 
-.fa, .fas {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-}
 
 .text-light {
     color: #f8f9fa !important;
@@ -500,4 +502,34 @@ h1, .h1 {
 
 b, strong {
     font-weight: bolder;
+}
+
+.fa-user-cog:before {
+    content: "\f4fe";
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+.form-control-file, .form-control-range {
+    display: block;
+    width: 100%;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+#error_explanation {
+    color: red;
 }
