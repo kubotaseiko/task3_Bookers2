@@ -11,10 +11,32 @@
               <th>introduction</th>
               <th><%= user.introduction %></th>
             </tr>
+            <tr>
+              <th>follows</th>
+              <th><%= link_to user.following.count, followings_user_path(user.id) %></th>
+            </tr>
+            <tr>
+              <th>followers</th>
+              <th><%= link_to user.followers.count, followers_user_path(user.id) %></th>
+            </tr>
           </tbody>
         </table>
             <div class="row">
+              <% if current_user == user %>
               <%= link_to "", edit_user_path(user.id), class: "btn btn-outline-secondary btn-block fas fa-user-cog edit_user#{current_user.id}" %>
+              <% else %>
+                <% if current_user != user %>
+                  <% if current_user.following?(user) %>
+                    <%= link_to relationship_path(user.id), method: :DELETE do %>
+                    <label class="btn btn-follow">フォローを外す</label>
+                    <% end %>
+                  <% else %>
+                    <%= link_to relationships_path(followed_id: user.id), method: :POST do %>
+                    <label class="btn btn-success">フォロー</label>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              <% end %>
             </div>
 
           <%= form_with model: book, url: '/books', local:true do |f| %>

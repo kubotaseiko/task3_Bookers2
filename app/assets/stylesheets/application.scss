@@ -264,6 +264,12 @@ html {
     border-color: #28a745;
 }
 
+.btn-follow {
+    color: #fff;
+    background-color: #3399FF;
+    border-color: #3399FF;
+}
+
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;
 }
@@ -538,3 +544,8 @@ b, strong {
 .heart_red{color:#e54747;}
 /*青いハート*/
 .heart_blue{color:#528fff;}
+
+.follow_container {
+    padding: 10px 150px;
+}
+

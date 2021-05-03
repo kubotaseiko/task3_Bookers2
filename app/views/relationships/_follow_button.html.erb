@@ -1,0 +1,11 @@
+<% if current_user != user %>
+  <% if current_user.following?(user) %>
+    <%= link_to relationship_path(user.id), method: :DELETE do %>
+    フォローを外す
+    <% end %>
+  <% else %>
+    <%= link_to relationships_path(followed_id: user.id), method: :POST do %>
+    フォロー
+    <% end %>
+  <% end %>
+<% end %>
