@@ -1,0 +1,4 @@
+$("#comment_area").html("<%= j(render 'book_comments/index', book_comments: @book.book_comments ) %>");
+$("textarea").val('')
+$(".comment_count").html("コメント数：<%= @book.book_comments.count %>");
+

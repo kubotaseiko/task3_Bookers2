@@ -99,6 +99,7 @@ element.style {
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
     line-height: normal;
+}
 
 .fa, .fas, .far, .fal, .fad, .fab {
     -moz-osx-font-smoothing: grayscale;
@@ -114,7 +115,7 @@ element.style {
 .fa, .fas {
 font-family: 'Font Awesome 5 Free';
 font-weight: 900;
-}
+background: none;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -541,11 +542,12 @@ b, strong {
 }
 
 
-.heart_red{color:#e54747;}
+.heart_red{
+    color:#e54747;
+}
 /*青いハート*/
 .heart_blue{color:#528fff;}
 
 .follow_container {
     padding: 10px 150px;
 }
-
