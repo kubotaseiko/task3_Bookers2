@@ -6,21 +6,9 @@
             <table class="message">
               <% @chats.each do |chat| %>
                 <% if chat.user_id == current_user.id %>
-                <tbody>
-                  <tr>
-                    <td>
                       <p style="text-align: left;"><%= chat.message %></p>
-                    </td>
-                    <td></td>
-                  </tr>
                 <% else %>
-                  <tr>
-                    <td></td>
-                    <td>
                       <p style="text-align: right; width: 550px;"><%= chat.message %></p>
-                    </td>
-                  </tr>
-                </tbody>
                 <% end %>
               <% end %>
             </table>
