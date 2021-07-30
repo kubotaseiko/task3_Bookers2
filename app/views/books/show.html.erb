@@ -20,7 +20,7 @@
             <% if @book.user == current_user %>
             <td><%= link_to 'Edit', edit_book_path(@book.id), class: "btn btn-sm btn-success" %></td>
             <td><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-sm btn-danger" %></a></td>
-            <td> <%= render 'book_comments/index', comments: user.comments %></td>
+            <td> <%= render 'book_comments/index', book_comments: @book.book_comments %></td>
             <% end %>
           </tr>
         </tbody>
